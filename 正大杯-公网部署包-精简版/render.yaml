@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: field01-zhengdabei
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "FIELD_HOST=0.0.0.0 python3 server.py"
+    envVars:
+      - key: FIELD_HOST
+        value: 0.0.0.0
